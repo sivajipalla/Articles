@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="21513" systemVersion="21G419" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="ArticleEntity" representedClassName="ArticleEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="abstract" optional="YES" attributeType="String"/>
+        <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="pubDate" optional="YES" attributeType="String"/>
+        <relationship name="headlineEntity" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="HeadlineEntity"/>
+        <relationship name="multimediaEntity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MultimediaEntity"/>
+    </entity>
+    <entity name="HeadlineEntity" representedClassName="HeadlineEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="main" optional="YES" attributeType="String"/>
+        <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArticleEntity"/>
+    </entity>
+    <entity name="MultimediaEntity" representedClassName="MultimediaEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="article" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="ArticleEntity"/>
+    </entity>
+</model>

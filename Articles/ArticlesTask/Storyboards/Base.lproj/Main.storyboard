@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ArticlesVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ArticlesVC" customModule="ArticlesTask" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Articles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNc-V2-HlG">
+                                <rect key="frame" x="150.66666666666666" y="79" width="91.666666666666657" height="27.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B64-Kg-ZfE">
+                                <rect key="frame" x="0.0" y="125.66666666666667" width="393" height="1"/>
+                                <color key="backgroundColor" systemColor="systemGray3Color"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="kuh-6d-mjk"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="iet-De-UW4">
+                                <rect key="frame" x="0.0" y="126.66666666666669" width="393" height="691.33333333333326"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="jpO-Qx-4lz">
+                                <rect key="frame" x="178" y="420" width="37" height="37"/>
+                                <color key="color" systemColor="systemOrangeColor"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="B64-Kg-ZfE" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="CiI-nl-HYa"/>
+                            <constraint firstItem="jpO-Qx-4lz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="EHI-oI-K1h"/>
+                            <constraint firstItem="TNc-V2-HlG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ETQ-Gb-jza"/>
+                            <constraint firstItem="iet-De-UW4" firstAttribute="top" secondItem="B64-Kg-ZfE" secondAttribute="bottom" id="KiV-mh-MDT"/>
+                            <constraint firstItem="jpO-Qx-4lz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="P0e-0F-4bx"/>
+                            <constraint firstItem="iet-De-UW4" firstAttribute="top" secondItem="TNc-V2-HlG" secondAttribute="bottom" constant="20" id="UJh-HV-bXx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iet-De-UW4" secondAttribute="bottom" id="VSg-Uf-Ago"/>
+                            <constraint firstItem="iet-De-UW4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Z9V-pg-oBt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iet-De-UW4" secondAttribute="trailing" id="hXx-Zx-8sr"/>
+                            <constraint firstItem="B64-Kg-ZfE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hYT-bY-dhh"/>
+                            <constraint firstItem="TNc-V2-HlG" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="kVv-22-z7v"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="jpO-Qx-4lz" id="poh-OW-iDZ"/>
+                        <outlet property="articlesTV" destination="iet-De-UW4" id="Lz6-Zd-IKp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-28.244274809160306" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
